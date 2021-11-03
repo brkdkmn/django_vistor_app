@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'home',
 
     #third party
+    'crispy_forms',
 
 ]
 
@@ -88,17 +89,17 @@ DATABASES = {
     }
 }
 
-#DATABASES = {
- #   "default": {
-  #      'ENGINE': 'django.db.backends.postgresql_psycopg2',
-   #     "NAME": config("SQL_DATABASE"),
-    #    "USER": config("SQL_USER"),
-     #   "PASSWORD": config("SQL_PASSWORD"),
-      #  "HOST": config("SQL_HOST"),
-      #  "PORT": config("SQL_PORT"),
-       # "ATOMIC_REQUESTS": True,
-    #}
-#}
+# DATABASES = {
+#    "default": {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        "NAME": config("SQL_DATABASE"),
+#        "USER": config("SQL_USER"),
+#        "PASSWORD": config("SQL_PASSWORD"),
+#        "HOST": config("SQL_HOST"),
+#        "PORT": config("SQL_PORT"),
+#        "ATOMIC_REQUESTS": True,
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -151,3 +152,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = "/"
+

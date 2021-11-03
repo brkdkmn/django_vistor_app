@@ -3,7 +3,6 @@ from django.db.models import fields
 from django.forms.widgets import TextInput
 from .models import Contact
 
-
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
